@@ -8,13 +8,17 @@ use Liberu\Foundation\Sessions\Queries\SessionReader;
 
 final class AccountSecurity extends Page
 {
+    #[\Override]
     protected string $view = 'sessions-devices-filament::pages.account-security';
 
+    #[\Override]
     protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-shield-check';
 
+    #[\Override]
     protected static ?string $navigationLabel = 'Security & Preferences';
 
-    protected static string|\UnitEnum|null $navigationGroup = 'Account & Security';
+    #[\Override]
+    protected static string|\UnitEnum|null $navigationGroup = 'Account';
 
     public Collection $sessions;
 
