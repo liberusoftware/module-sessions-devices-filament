@@ -4,14 +4,10 @@ declare(strict_types=1);
 
 use App\Models\User;
 use Filament\Panel;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\DB;
 use Liberu\Foundation\Sessions\Queries\SessionReader;
 use Liberu\Foundation\SessionsDevicesFilament\Pages\AccountSecurity;
 use Liberu\Foundation\SessionsDevicesFilament\SessionsDevicesFilamentPlugin;
-use Tests\TestCase;
-
-uses(TestCase::class, RefreshDatabase::class);
 
 it('registers the account security page through the filament plugin', function () {
     $plugin = SessionsDevicesFilamentPlugin::make();
